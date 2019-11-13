@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: myashupod1
+
+
+spec:
+ containers:
+  - image: nginx
+    name: c1
+    ports:
+     - containerPort: 80   #  you don't have to define host port -same as dockerfile expose
+    imagePullPolicy: IfNotPresent
